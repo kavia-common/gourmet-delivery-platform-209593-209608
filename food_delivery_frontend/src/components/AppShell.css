@@ -1,0 +1,132 @@
+.Shell {
+  min-height: 100vh;
+}
+
+.ShellTopbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 16, 32, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.ShellBrand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.ShellLogo {
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.ShellTag {
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px dashed rgba(230, 240, 255, 0.22);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.ShellTopRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ShellUser {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+}
+
+.ShellUserName {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.ShellUserRole {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+.ShellBody {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+.ShellSidebar {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(16, 26, 51, 0.92), rgba(15, 22, 48, 0.72));
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+.ShellSidebarTitle {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ShellNav {
+  display: grid;
+  gap: 8px;
+}
+
+.ShellNavItem {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  border: 1px solid rgba(230, 240, 255, 0.08);
+  background: rgba(11, 16, 32, 0.4);
+}
+
+.ShellNavItem.active {
+  border-color: rgba(59, 130, 246, 0.55);
+  box-shadow: var(--glow);
+}
+
+.ShellNavIcon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1px solid rgba(230, 240, 255, 0.12);
+  background: rgba(16, 26, 51, 0.9);
+}
+
+.ShellNavLabel {
+  font-weight: 800;
+}
+
+.ShellContent {
+  border: 1px solid var(--border);
+  background: rgba(16, 26, 51, 0.55);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 920px) {
+  .ShellBody {
+    grid-template-columns: 1fr;
+  }
+}

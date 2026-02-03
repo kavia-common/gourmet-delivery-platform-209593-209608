@@ -1,0 +1,148 @@
+.Card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(11, 16, 32, 0.35);
+  overflow: hidden;
+}
+
+.CardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid rgba(230, 240, 255, 0.1);
+}
+
+.CardHeadText {
+  min-width: 0;
+}
+
+.CardTitle {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+.CardSubtitle {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.CardActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.CardBody {
+  padding: 14px;
+}
+
+.Pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(230, 240, 255, 0.14);
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--text);
+  background: rgba(16, 26, 51, 0.72);
+}
+
+.Pill-info {
+  border-color: rgba(59, 130, 246, 0.55);
+}
+
+.Pill-ok {
+  border-color: rgba(6, 182, 212, 0.55);
+}
+
+.Pill-warn {
+  border-color: rgba(245, 158, 11, 0.55);
+}
+
+.Pill-bad {
+  border-color: rgba(239, 68, 68, 0.55);
+}
+
+.Field {
+  display: grid;
+  gap: 6px;
+}
+
+.FieldLabel {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.FieldInput {
+  border-radius: 14px;
+  border: 1px solid rgba(230, 240, 255, 0.16);
+  background: rgba(11, 16, 32, 0.55);
+  color: var(--text);
+  padding: 11px 12px;
+  outline: none;
+}
+
+.FieldInput:focus {
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: var(--glow);
+}
+
+.FieldHelp {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.FieldError {
+  color: rgba(239, 68, 68, 0.92);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.Loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.LoadingSpinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(230, 240, 255, 0.18);
+  border-top-color: rgba(59, 130, 246, 0.85);
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ErrorBanner {
+  border: 1px solid rgba(239, 68, 68, 0.42);
+  background: rgba(239, 68, 68, 0.09);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.ErrorBannerTitle {
+  font-weight: 900;
+}
+
+.ErrorBannerDetails {
+  margin: 10px 0 0;
+  color: rgba(230, 240, 255, 0.8);
+  font-size: 12px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
